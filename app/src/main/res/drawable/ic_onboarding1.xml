@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="250dp"
+    android:height="250dp"
+    android:viewportWidth="250"
+    android:viewportHeight="250">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#F5F3FF"
+        android:pathData="M0,0h250v250h-250z" />
+
+    <!-- Decorative circles -->
+    <path
+        android:fillColor="#E0D6FF"
+        android:pathData="M200,50m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0" />
+    <path
+        android:fillColor="#E0D6FF"
+        android:pathData="M50,200m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
+
+    <!-- Desk -->
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M40,160 L210,160 L210,180 L40,180 Z" />
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M50,180 L50,210 L60,210 L60,180 Z" />
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M190,180 L190,210 L200,210 L200,180 Z" />
+
+    <!-- Open Book -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,100 L125,115 L180,100 L180,150 L125,165 L70,150 Z" />
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M125,115 L125,165" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M80,110 L115,118 L115,140 L80,132 Z" />
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M135,118 L170,110 L170,132 L135,140 Z" />
+
+    <!-- Laptop -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M150,85 L210,85 L210,105 L150,105 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M160,105 L200,105 L205,115 L155,115 Z" />
+
+    <!-- Coffee Cup -->
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M60,130 L75,130 L75,150 L60,150 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M75,135 L82,138 L82,148 L75,145 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M65,135 Q67.5,133 70,135 Q72.5,137 70,138 Q67.5,140 65,138 Z" />
+
+    <!-- Plant -->
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M210,145 Q215,125 225,115 Q235,125 230,145 Z" />
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M220,140 Q225,120 220,105 Q215,120 220,140 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M215,150 L225,150 L225,160 L215,160 Z" />
+
+    <!-- Light/Lamp -->
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M30,70 L50,70 L45,90 L35,90 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M35,60 L45,60 L45,70 L35,70 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M40,50 L40,60" />
+
+</vector>

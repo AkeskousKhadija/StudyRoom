@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudyRoom">
+        <activity
+            android:name=".auth.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".auth.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".meetings.MeetingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".meetings.MeetingCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meetings.MeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.AvatarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.Language_activity"
+            android:exported="false" />
+        <activity
+            android:name=".groups.GroupsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.ChatListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.Appearance"
+            android:exported="false" />
+        <activity
+            android:name=".meetings.CalendarMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meetings.PlanifierMeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meetings.MeetingDetailsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

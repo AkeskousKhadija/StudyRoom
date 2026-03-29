@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="250dp"
+    android:height="250dp"
+    android:viewportWidth="250"
+    android:viewportHeight="250">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M0,0h250v250h-250z" />
+
+    <!-- Decorative circles -->
+    <path
+        android:fillColor="#DCFCE7"
+        android:pathData="M220,40m-25,0a25,25 0,1 1,50 0a25,25 0,1 1,-50 0" />
+    <path
+        android:fillColor="#DCFCE7"
+        android:pathData="M30,210m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
+
+    <!-- Meeting Table -->
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M50,170 L200,170 L210,190 L40,190 Z" />
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M60,190 L60,220 L70,220 L70,190 Z" />
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M180,190 L180,220 L190,220 L190,190 Z" />
+
+    <!-- Person 1 (Center) -->
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M125,60 C140,60 150,75 150,90 C150,102 143,112 133,117 L133,135 L117,135 L117,117 C107,112 100,102 100,90 C100,75 110,60 125,60 Z" />
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M125,50 C118,50 112,54 108,60 C106,64 106,69 108,73 C112,72 118,72 125,72 C132,72 138,72 142,73 C144,69 144,64 142,60 C138,54 132,50 125,50 Z" />
+
+    <!-- Person 2 (Left) -->
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M55,75 C65,75 72,85 72,95 C72,103 67,110 60,113 L60,125 L50,125 L50,113 C43,110 38,103 38,95 C38,85 45,75 55,75 Z" />
+    <path
+        android:fillColor="#0891B2"
+        android:pathData="M55,68 C50,68 46,71 43,75 C42,78 42,81 43,84 C46,83 50,83 55,83 C60,83 64,83 67,84 C68,81 68,78 67,75 C64,71 60,68 55,68 Z" />
+
+    <!-- Person 3 (Right) -->
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M195,75 C205,75 212,85 212,95 C212,103 207,110 200,113 L200,125 L190,125 L190,113 C183,110 178,103 178,95 C178,85 185,75 195,75 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M195,68 C190,68 186,71 183,75 C182,78 182,81 183,84 C186,83 190,83 195,83 C200,83 204,83 207,84 C208,81 208,78 207,75 C204,71 200,68 195,68 Z" />
+
+    <!-- Speech Bubble 1 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,45 L65,45 L65,70 L35,70 L25,80 L25,45 Z" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M35,55 L55,55 M35,62 L50,62" />
+
+    <!-- Speech Bubble 2 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M185,40 L225,40 L225,65 L205,65 L195,75 L185,65 L185,40 Z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M195,50 L215,50 M195,57 L210,57" />
+
+    <!-- Calendar/Schedule Icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90,145 L160,145 L160,185 L90,185 Z" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M95,145 L155,145 L155,155 L95,155 Z" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M105,160 L115,160 L115,175 L105,175 Z" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M125,160 L135,160 L135,175 L125,175 Z" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M145,160 L155,160 L155,175 L145,175 Z" />
+
+    <!-- Clock Icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M170,140 m-15,0 a15,15 0 1,1 30,0 a15,15 0 1,1 -30,0" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M170,130 L170,140 L178,143" />
+
+</vector>

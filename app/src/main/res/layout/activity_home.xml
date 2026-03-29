@@ -1,0 +1,79 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background" android:focusable="true" android:focusableInTouchMode="true">
+<!--  Top Bar  -->
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/topBar" android:layout_width="0dp" android:layout_height="wrap_content" android:background="@color/white" android:elevation="4dp" android:padding="16dp" android:focusable="true" android:focusableInTouchMode="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+<com.google.android.material.textfield.TextInputLayout android:id="@+id/tilSearch" style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginEnd="12dp" android:hint="@string/search" android:clickable="true" android:focusable="false" app:boxCornerRadiusBottomEnd="24dp" app:boxCornerRadiusBottomStart="24dp" app:boxCornerRadiusTopEnd="24dp" app:boxCornerRadiusTopStart="24dp" app:startIconDrawable="@drawable/ic_search" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ivNotification" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+<com.google.android.material.textfield.TextInputEditText android:id="@+id/etSearch" android:layout_width="match_parent" android:layout_height="wrap_content" android:focusable="false" android:clickable="true" android:inputType="text" android:maxLines="1"/>
+</com.google.android.material.textfield.TextInputLayout>
+<ImageView android:id="@+id/ivNotification" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_notification" android:contentDescription="@string/notifications" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/primary"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+<!--  Scrollable Content  -->
+<androidx.core.widget.NestedScrollView android:id="@+id/scrollView" android:layout_width="0dp" android:layout_height="0dp" android:fillViewport="true" app:layout_constraintBottom_toTopOf="@id/bottomBar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/topBar">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+<!--  Weekly Calendar Section  -->
+<TextView android:id="@+id/tvThisWeek" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/this_week" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold"/>
+<androidx.cardview.widget.CardView android:id="@+id/cardCalendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:cardCornerRadius="16dp" app:cardElevation="2dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+<!--  Day Headers  -->
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/mon" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/tue" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/wed" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/thu" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/fri" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/sat" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="@string/sun" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+</LinearLayout>
+<!--  Meeting Indicators - Clickable Days  -->
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+<!--  Monday  -->
+<LinearLayout android:id="@+id/dayMon" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorMon" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator" android:visibility="invisible"/>
+</LinearLayout>
+<!--  Tuesday  -->
+<LinearLayout android:id="@+id/dayTue" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorTue" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator" android:visibility="invisible"/>
+</LinearLayout>
+<!--  Wednesday - Has Meeting  -->
+<LinearLayout android:id="@+id/dayWed" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorWed" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator"/>
+</LinearLayout>
+<!--  Thursday  -->
+<LinearLayout android:id="@+id/dayThu" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorThu" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator" android:visibility="invisible"/>
+</LinearLayout>
+<!--  Friday - Has Meeting  -->
+<LinearLayout android:id="@+id/dayFri" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorFri" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator_green"/>
+</LinearLayout>
+<!--  Saturday - Has Meeting  -->
+<LinearLayout android:id="@+id/daySat" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorSat" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator_orange"/>
+</LinearLayout>
+<!--  Sunday  -->
+<LinearLayout android:id="@+id/daySun" android:layout_width="0dp" android:layout_height="60dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+<View android:id="@+id/indicatorSun" android:layout_width="32dp" android:layout_height="8dp" android:background="@drawable/bg_meeting_indicator" android:visibility="invisible"/>
+</LinearLayout>
+</LinearLayout>
+<!--  Tap hint  -->
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="8dp" android:text="@string/tap_to_see_details" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+<!--  Groups Section  -->
+<TextView android:id="@+id/tvGroupsTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/groups_to_join" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold"/>
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/rvGroups" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:nestedScrollingEnabled="false"/>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
+<!--  Bottom Navigation Bar  -->
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/bottomBar" android:layout_width="0dp" android:layout_height="wrap_content" android:background="@color/white" android:elevation="8dp" android:padding="8dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+<!--  Left Options  -->
+<ImageView android:id="@+id/ivHome" android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_home" android:contentDescription="@string/home" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ivGroups" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/primary"/>
+<ImageView android:id="@+id/ivGroups" android:layout_width="26dp" android:layout_height="27dp" android:contentDescription="@string/groups" android:src="@drawable/ic_groups" android:clickable="true" android:focusable="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/fabAdd" app:layout_constraintStart_toEndOf="@id/ivHome" app:layout_constraintTop_toTopOf="parent" app:tint="@color/text_secondary"/>
+<!--  Center + Button  -->
+<com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fabAdd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_add" android:contentDescription="@string/add" app:backgroundTint="@color/primary" app:fabSize="normal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ivChat" app:layout_constraintStart_toEndOf="@id/ivGroups" app:layout_constraintTop_toTopOf="parent" app:tint="@color/white"/>
+<!--  Right Options  -->
+<ImageView android:id="@+id/ivChat" android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_chat" android:contentDescription="@string/chat" android:clickable="true" android:focusable="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ivProfile" app:layout_constraintStart_toEndOf="@id/fabAdd" app:layout_constraintTop_toTopOf="parent" app:tint="@color/text_secondary"/>
+<ImageView android:id="@+id/ivProfile" android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_profile" android:contentDescription="@string/profile" android:clickable="true" android:focusable="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ivChat" app:layout_constraintTop_toTopOf="parent" app:tint="@color/text_secondary"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FF"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- CardView pour les détails du meeting avec design amélioré -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:stateListAnimator="@null">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Badge de statut (optionnel) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/circle_gradient"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeting actif"
+                        android:textSize="14sp"
+                        android:textColor="#667085"
+                        android:textStyle="normal"
+                        android:letterSpacing="0.02"/>
+                </LinearLayout>
+
+                <!-- Titre avec icône -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_video"
+                        android:tint="#7C3AED"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvMeetingTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Titre du meeting"
+                        android:textSize="24sp"
+                        android:textColor="#1A1A2E"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="4dp"
+                        tools:text="Réunion d'équipe hebdomadaire"/>
+                </LinearLayout>
+
+                <!-- Date avec icône -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp"
+                    android:background="#F8FAFC"
+                    android:padding="16dp"
+                    android:radius="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_calendar"
+                        android:tint="#7C3AED"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvMeetingDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date et heure"
+                        android:textSize="16sp"
+                        android:textColor="#334155"
+                        android:fontFamily="sans-serif"
+                        android:letterSpacing="0.01"
+                        tools:text="Lundi 15 janvier 2024 • 14h30"/>
+                </LinearLayout>
+
+                <!-- Description avec icône -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginBottom="20dp"
+                    android:background="#F8FAFC"
+                    android:padding="16dp"
+                    android:radius="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_description"
+                        android:tint="#7C3AED"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvMeetingDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description du meeting"
+                        android:textSize="15sp"
+                        android:textColor="#475569"
+                        android:lineSpacingExtra="6dp"
+                        android:fontFamily="sans-serif"
+                        tools:text="Point sur l'avancement du projet, discussion des prochaines étapes et attribution des tâches pour la semaine à venir."/>
+                </LinearLayout>
+
+                <!-- Séparateur élégant -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/gradient_divider"
+                    android:layout_marginVertical="16dp"/>
+
+                <!-- Participants avec design moderne -->
+                <TextView
+                    android:id="@+id/tvParticipantsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participants"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="12dp"
+                    android:letterSpacing="0.01"/>
+
+                <!-- Badge avec nombre de participants -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/badge_purple"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tvParticipantCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8 participants"
+                        android:textSize="14sp"
+                        android:textColor="#7C3AED"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Container des participants avec animation -->
+                <LinearLayout
+                    android:id="@+id/participantsContainer"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/participant_divider"
+                    android:showDividers="middle"
+                    android:animateLayoutChanges="true">
+                    <!-- Les participants seront ajoutés dynamiquement -->
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bouton retour stylisé -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Retour à la liste"
+            android:backgroundTint="@null"
+            android:background="@drawable/button_gradient"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.02"
+            android:padding="12dp"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            android:elevation="4dp"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

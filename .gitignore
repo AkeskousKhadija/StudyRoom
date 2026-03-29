@@ -1,0 +1,68 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# IntelliJ
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Eclipse/Android Studio
+.classpath
+.project
+.settings/
+.metadata/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Android
+captures/
+.externalNativeBuild/
+.cxx
+*.log
+
+# Firebase
+google-services.json
+
+# Keystore files
+*.jks
+*.keystore
+
+# Proguard
+proguard/
+
+# Kotlin
+.kotlin/
+
+# Build outputs
+app/build/
+app/*.apk
+app/*.aab
+
+# Team member folders to exclude
+*/mariam/
+*/hajar/
+*/imaneVersion/
