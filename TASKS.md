@@ -1,191 +1,462 @@
-# StudyRoom - Répartition des Tâches d'Équipe
+# StudyRoom - Répartition des Tâches Développement
 
-## 📋 Structure du Projet
+## 🎯 Structure Backend + Frontend
 
-```
-app/src/main/java/com/projet/studyroom/
-├── auth/           # Authentification (5 fichiers)
-├── chat/           # Chat (5 fichiers)
-├── groups/         # Groupes (3 fichiers)
-├── home/          # Accueil (3 fichiers)
-├── meetings/      # Réunions (8 fichiers)
-├── notifications/ # Notifications (3 fichiers)
-├── profile/       # Profil (4 fichiers)
-└── search/        # Recherche (3 fichiers)
-```
+Pour une équipe de 4 développeurs, séparés en **Backend** et **Frontend**:
 
 ---
 
-## 👥 Répartition des Tâches pour 4 Membres
+## 👥 Équipe Backend (2 développeurs)
 
----
+### **Backend 1: Chat & Conversations**
 
-### **Membre 1: Auth + Profile**
+**Responsable:** Fonctionnalités temps réel - Chat et Messagerie
 
-**Responsable:** Authentification et Gestion du Profil
+#### 🔥 Tâches à implémenter:
 
-#### 🔐 Authentification (auth/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`LoginActivity.kt`](app/src/main/java/com/projet/studyroom/auth/LoginActivity.kt) | Connexion Firebase | ⭐ Haute |
-| [`RegisterActivity.kt`](app/src/main/java/com/projet/studyroom/auth/RegisterActivity.kt) | Inscription Firebase | ⭐ Haute |
-| [`SplashActivity.kt`](app/src/main/java/com/projet/studyroom/auth/SplashActivity.kt) | Écran de chargement | 🔄 Moyen |
-| [`OnboardingActivity.kt`](app/src/main/java/com/projet/studyroom/auth/OnboardingActivity.kt) | Tutoriel introductif | 🔄 Moyen |
-| [`Language_activity.kt`](app/src/main/java/com/projet/studyroom/auth/Language_activity.kt) | Sélection langue | 🔄 Moyen |
-
-#### 👤 Profil (profile/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`ProfileActivity.kt`](app/src/main/java/com/projet/studyroom/profile/ProfileActivity.kt) | Affichage profil | ⭐ Haute |
-| [`EditProfileActivity.kt`](app/src/main/java/com/projet/studyroom/profile/EditProfileActivity.kt) | Modification profil | ⭐ Haute |
-| [`AvatarActivity.kt`](app/src/main/java/com/projet/studyroom/profile/AvatarActivity.kt) | Changement avatar | 🔄 Moyen |
-| [`SettingsActivity.kt`](app/src/main/java/com/projet/studyroom/profile/SettingsActivity.kt) | Paramètres (22KB - كبير) | ⭐ Haute |
-
-**Tâches:**
-- [ ] Vérifier la connexion Firebase dans LoginActivity
-- [ ] Améliorer la validation des formulaires
-- [ ] Implémenter "mot de passe oublié"
-- [ ] Ajouter gestion des erreurs Firebase
-- [ ] Tester l'inscription et connexion
-
----
-
-### **Membre 2: Chat + Groups**
-
-**Responsable:** Chat en temps réel et Gestion des Groupes
-
-#### 💬 Chat (chat/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`ChatActivity.kt`](app/src/main/java/com/projet/studyroom/chat/ChatActivity.kt) | (15KB - أكبر ملف) | ⭐ Haute |
-| [`ChatListActivity.kt`](app/src/main/java/com/projet/studyroom/chat/ChatListActivity.kt) | Liste des conversations | ⭐ Haute |
-| [`ChatMessage.kt`](app/src/main/java/com/projet/studyroom/chat/ChatMessage.kt) | Modèle message | 🔄 Moyen |
-| [`ChatMessageAdapter.kt`](app/src/main/java/com/projet/studyroom/chat/ChatMessageAdapter.kt) | Affichage messages | 🔄 Moyen |
-| [`ChatGroupsAdapter.kt`](app/src/main/java/com/projet/studyroom/chat/ChatGroupsAdapter.kt) | Liste des groupes | 🔄 Moyen |
-
-#### 👥 Groups (groups/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`Group.kt`](app/src/main/java/com/projet/studyroom/groups/Group.kt) | Modèle groupe | 🔄 Moyen |
-| [`GroupsActivity.kt`](app/src/main/java/com/projet/studyroom/groups/GroupsActivity.kt) | Liste/groupes (8KB) | ⭐ Haute |
-| [`GroupsAdapter.kt`](app/src/main/java/com/projet/studyroom/groups/GroupsAdapter.kt) | Affichage groupes | 🔄 Moyen |
-
-**Tâches:**
-- [ ] Intégrer Firestore pour les messages en temps réel
-- [ ] Créer/Delete/Edit groupes
-- [ ] Ajouter/supprimer membres d'un groupe
-- [ ] Implémenter l'envoi de messages
-- [ ] Afficher les messages en temps réel
-
----
-
-### **Membre 3: Meetings + Calendar**
-
-**Responsable:** Planification et Gestion des Réunions
-
-#### 📅 Meetings (meetings/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`MeetingActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingActivity.kt) | (7KB) | ⭐ Haute |
-| [`MeetingDetailActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingDetailActivity.kt) | ⚠️ TODO à implémenter | 🔴 Urgent |
-| [`MeetingDetailsActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingDetailsActivity.kt) | (2KB) | 🔄 Moyen |
-| [`MeetingCalendarActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingCalendarActivity.kt) | Vue calendrier | ⭐ Haute |
-| [`PlanifierMeetingActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/PlanifierMeetingActivity.kt) | Créer réunion | ⭐ Haute |
-| [`CalendarMeeting.kt`](app/src/main/java/com/projet/studyroom/meetings/CalendarMeeting.kt) | Modèle réunion | 🔄 Moyen |
-| [`CalendarMeetingActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/CalendarMeetingActivity.kt) | (7KB) | ⭐ Haute |
-| [`CalendarMeetingAdapter.kt`](app/src/main/java/com/projet/studyroom/meetings/CalendarMeetingAdapter.kt) | Affichage réunion | 🔄 Moyen |
-
-#### ⚠️ Tâches URGENTES dans [`MeetingDetailActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingDetailActivity.kt:23)
+##### 1. Modèle de données Firestore (Chat)
 ```kotlin
-// TODO: Implement join meeting logic     ← À FAIRE
-// TODO: Implement add to calendar logic  ← À FAIRE
+// Fichier: chat/ChatMessage.kt - À AMÉLIORER
+- Ajouter champs: timestamp, read, attachments
+- Ajouter type: text, image, file
 ```
 
+##### 2. Opérations Firestore - ChatActivity.kt
+```kotlin
+// Dans: chat/ChatActivity.kt (lignes 12-14, 23, 39)
+
+1. Envoyer message:
+   db.collection("groups").document(groupId)
+      .collection("messages")
+      .add(messageData)
+
+2. Écouter messages en temps réel:
+   db.collection("groups").document(groupId)
+      .collection("messages")
+      .orderBy("timestamp", Query.Direction.ASCENDING)
+      .addSnapshotListener { ... }
+
+3. Marquer comme lu:
+   - Update read: true quand message affiché
+
+4. Supprimer message:
+   db.collection("groups").document(groupId)
+      .collection("messages").document(messageId)
+      .delete()
+```
+
+##### 3. ChatListActivity.kt - Charger liste conversations
+```kotlin
+// Dans: chat/ChatListActivity.kt
+
+1. Charger groupes de l'utilisateur:
+   db.collection("groups")
+      .whereArrayContains("members", currentUserId)
+      .get()
+
+2. Afficher dernier message:
+   - Requête pour dernier message par groupe
+
+3. Compteur messages non lus:
+   - Query where read == false
+```
+
+##### 4. ChatGroupsAdapter.kt - Gestion groupes
+```kotlin
+// Dans: chat/ChatGroupsAdapter.kt
+
+1. Créer groupe:
+   db.collection("groups").add(groupData)
+
+2. Ajouter membre:
+   - Update array members
+
+3. Quitter groupe:
+   - Remove from members array
+```
+
+**Fichiers à modifier:**
+- [`chat/ChatActivity.kt`](app/src/main/java/com/projet/studyroom/chat/ChatActivity.kt) - 15KB
+- [`chat/ChatMessage.kt`](app/src/main/java/com/projet/studyroom/chat/ChatMessage.kt)
+- [`chat/ChatListActivity.kt`](app/src/main/java/com/projet/studyroom/chat/ChatListActivity.kt)
+- [`chat/ChatGroupsAdapter.kt`](app/src/main/java/com/projet/studyroom/chat/ChatGroupsAdapter.kt)
+- [`chat/ChatMessageAdapter.kt`](app/src/main/java/com/projet/studyroom/chat/ChatMessageAdapter.kt)
+
 **Tâches:**
-- [ ] Implémenter "Rejoindre réunion" (btnJoinMeeting)
-- [ ] Implémenter "Ajouter au calendrier" (btnAddToCalendar)
-- [ ] Créer réunion avec date/heure/lieu
-- [ ] Afficher les réunions à venir
-- [ ] Envoyer notifications de rappel
+- [ ] Créer collection Firestore: `groups`, `messages`
+- [ ] Implémenter envoi/réception messages temps réel
+- [ ] Ajouter support images/fichiers
+- [ ] Implémenter indicateur "en train d'écrire"
+- [ ] Notifications push pour nouveaux messages
 
 ---
 
-### **Membre 4: Search + Notifications + Home**
+### **Backend 2: Meetings & Calendar**
 
-**Responsable:** Navigation, Recherche et Notifications
+**Responsable:** Planification, Réunions et Calendrier Firebase
 
-#### 🔍 Search (search/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`SearchActivity.kt`](app/src/main/java/com/projet/studyroom/search/SearchActivity.kt) | (5KB) | ⭐ Haute |
-| [`SearchResult.kt`](app/src/main/java/com/projet/studyroom/search/SearchResult.kt) | Modèle résultat | 🔄 Moyen |
-| [`SearchResultAdapter.kt`](app/src/main/java/com/projet/studyroom/search/SearchResultAdapter.kt) | Affichage résultats | 🔄 Moyen |
+#### 🔥 Tâches à implémenter:
 
-#### 🔔 Notifications (notifications/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`Notification.kt`](app/src/main/java/com/projet/studyroom/notifications/Notification.kt) | Modèle notification | 🔄 Moyen |
-| [`NotificationActivity.kt`](app/src/main/java/com/projet/studyroom/notifications/NotificationActivity.kt) | Liste notifications | ⭐ Haute |
-| [`NotificationAdapter.kt`](app/src/main/java/com/projet/studyroom/notifications/NotificationAdapter.kt) | Affichage notification | 🔄 Moyen |
+##### 1. Modèle de données Firestore (Meetings)
+```kotlin
+// Fichier: meetings/CalendarMeeting.kt - À AMÉLIORER
+data class Meeting(
+    val id: String,
+    val title: String,
+    val description: String,
+    val date: Long,
+    val startTime: String,
+    val endTime: String,
+    val location: String,
+    val organizerId: String,
+    val participants: List<String>,
+    val groupId: String,
+    val meetingLink: String?,  // Pour join meeting
+    val reminder: Int          // Minutes avant
+)
+```
 
-#### 🏠 Home (home/)
-| Fichier | Description | Priorité |
-|---------|------------|----------|
-| [`HomeActivity.kt`](app/src/main/java/com/projet/studyroom/home/HomeActivity.kt) | Dashboard (9KB) | ⭐ Haute |
-| [`MainActivity.kt`](app/src/main/java/com/projet/studyroom/home/MainActivity.kt) | Navigation principale | 🔄 Moyen |
-| [`Appearance.kt`](app/src/main/java/com/projet/studyroom/home/Appearance.kt) | Thème/apparence | 🔄 Moyen |
+##### 2. Opérations Firestore - PlanifierMeetingActivity.kt
+```kotlin
+// Dans: meetings/PlanifierMeetingActivity.kt (lignes 65-68)
+
+btnCreate.setOnClickListener {
+    // 1. Créer document meeting dans Firestore:
+    db.collection("meetings").add(meetingData)
+        .addOnSuccessListener { docRef ->
+            // 2. Ajouter aux calendriers des participants
+            participants.forEach { userId ->
+                addToUserCalendar(userId, docRef.id)
+            }
+            // 3. Envoyer notifications
+            sendMeetingNotification(participants)
+        }
+    
+    // TODO: Implémenter sauvegarde réelle (actuellement juste finish())
+}
+```
+
+##### 3. CalendarMeetingActivity.kt - Vue calendrier
+```kotlin
+// Dans: meetings/CalendarMeetingActivity.kt
+
+1. Charger réunions du mois:
+   db.collection("meetings")
+      .whereGreaterThan("date", startOfMonth)
+      .whereLessThan("date", endOfMonth)
+      .get()
+
+2. Afficher indicateurs sur dates:
+   - Vert: réunion demain
+   - Orange: réunion aujourd'hui
+   - Rouge: réunion en cours
+
+3. Filtrer par groupe:
+   db.collection("meetings")
+      .whereEqualTo("groupId", selectedGroupId)
+```
+
+##### 4. MeetingDetailActivity.kt - ⚠️ URGENT
+```kotlin
+// Dans: meetings/MeetingDetailActivity.kt (lignes 23-28)
+
+btnJoinMeeting.setOnClickListener {
+    // TODO: Implémenter join meeting logic
+    // 1. Générer/valider meeting link
+    // 2. Démarrer activité vidéo
+    // 3. Ajouter à l'historique
+}
+
+btnAddToCalendar.setOnClickListener {
+    // TODO: Implémenter add to calendar logic
+    // 1. Créer Intent pour calendrier système
+    // 2. Pré-remplir données réunion
+}
+```
+
+##### 5. MeetingCalendarActivity.kt - Calendrier réunions
+```kotlin
+// Dans: meetings/MeetingCalendarActivity.kt
+
+1. Vue mensuelle avec réunions:
+   - Afficher badges sur dates avec réunions
+
+2. Navigation mois précédent/suivant:
+   - Recharger réunions du nouveau mois
+
+3. Clic sur date:
+   - Afficher réunions du jour sélectionné
+```
+
+**Fichiers à modifier:**
+- [`meetings/PlanifierMeetingActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/PlanifierMeetingActivity.kt) - 3KB
+- [`meetings/CalendarMeetingActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/CalendarMeetingActivity.kt) - 7KB
+- [`meetings/CalendarMeeting.kt`](app/src/main/java/com/projet/studyroom/meetings/CalendarMeeting.kt)
+- [`meetings/MeetingDetailActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingDetailActivity.kt) - ⚠️ TODO
+- [`meetings/MeetingCalendarActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingCalendarActivity.kt) - 4KB
+- [`meetings/MeetingActivity.kt`](app/src/main/java/com/projet/studyroom/meetings/MeetingActivity.kt) - 7KB
 
 **Tâches:**
-- [ ] Implémenter recherche dans Firestore (groupes, utilisateurs)
-- [ ] Afficher résultats de recherche en temps réel
-- [ ] Créer système de notifications push
-- [ ] Dashboard avec statistiques
-- [ ] Navigation entre les écrans
+- [ ] Créer collection Firestore: `meetings`
+- [ ] Implémenter création/modification réunions
+- [ ] Ajouter intégration calendrier système Android
+- [ ] Implémenter liens de réunion (Zoom/Meet)
+- [ ] Système de rappels/notifications
 
 ---
 
-## 📊 Tableau Récapitulatif
+## 👥 Équipe Frontend (2 développeurs)
 
-| Membre | Modules | Nombre fichiers |
-|--------|---------|-----------------|
-| **Membre 1** | auth/ + profile/ | 9 fichiers |
-| **Membre 2** | chat/ + groups/ | 8 fichiers |
-| **Membre 3** | meetings/ | 8 fichiers |
-| **Membre 4** | search/ + notifications/ + home/ | 9 fichiers |
+### **Frontend 1: Auth + Profile + Groups**
+
+**Responsable:** Authentification, Profil utilisateur et Gestion des groupes
+
+#### 🎨 Fichiers Layout à créer/modifier:
+
+##### 1. Auth (layouts)
+- [`activity_login.xml`](app/src/main/res/layout/activity_login.xml) - Déjà existe
+- [`activity_register.xml`](app/src/main/res/layout/activity_register.xml) - Déjà existe
+
+##### 2. Profile (layouts)
+- [`activity_profile.xml`](app/src/main/res/layout/activity_profile.xml) - Déjà existe
+- [`activity_edit_profile.xml`](app/src/main/res/layout/activity_edit_profile.xml) - Déjà existe
+- [`activity_avatar.xml`](app/src/main/res/layout/activity_avatar.xml) - Déjà existe
+
+##### 3. Groups (layouts)
+- [`activity_groups.xml`](app/src/main/res/layout/activity_groups.xml) - Déjà existe
+- [`dialog_create_group.xml`](app/src/main/res/layout/dialog_create_group.xml) - Déjà existe
+- [`item_group.xml`](app/src/main/res/layout/item_group.xml) - Déjà existe
+
+#### 🎨 Tâches UI/UX:
+
+##### LoginActivity.kt - Améliorer design
+```kotlin
+// Ajouter:
+- Animation d'entrée (fade in)
+- Icônes dans les champs email/password
+- Bouton "Mot de passe oublié"
+- Indicateur chargement (progress bar)
+- Validation en temps réel
+```
+
+##### RegisterActivity.kt - Layout existant (lignes 1-100)
+```kotlin
+// Améliorer UX:
+- Vérification force mot de passe
+- Confirmation email
+- Animation de succès après inscription
+```
+
+##### ProfileActivity.kt
+```kotlin
+// Améliorer display:
+- RecyclerView pour info profil
+- Boutons Edit/Delete avatar
+- Animation transition vers EditProfile
+```
+
+##### GroupsActivity.kt - 8KB
+```kotlin
+// Améliorer interface:
+- FAB pour créer groupe (FloatingActionButton)
+- SwipeRefreshLayout pour actualiser
+- Dialog création groupe (dialog_create_group.xml)
+- Animation ajout/suppression groupe
+```
+
+**Tâches UI:**
+- [ ] Harmoniser les couleurs (suivre colors.xml)
+- [ ] Ajouter icônes Material Design
+- [ ] Animer les transitions entre écrans
+- [ ] Responsive design (tous écrans)
+- [ ] Feedback visuel (loading, errors)
 
 ---
 
-## 🚀 Instructions pour chaque membre
+### **Frontend 2: Search + Notifications + Home**
 
-1. **Cloner le repo:**
-   ```bash
-   git clone https://github.com/AkeskousKhadija/StudyRoom.git
-   ```
+**Responsable:** Navigation principale, Recherche et Système de notifications
 
-2. **Créer une branche:**
-   ```bash
-   git checkout -b feature/nom-du-membre
-   ```
+#### 🎨 Tâches UI/UX:
 
-3. **Travailler sur les fichiers assignés**
+##### SearchActivity.kt - 5KB
+```kotlin
+// Améliorer recherche:
+// 1. Auto-suggestions pendant frappe
+// 2. Filtres (groupes, utilisateurs, réunions)
+// 3. Historique des recherches
+// 4. Animation résultats
+// 5. Empty state design
 
-4. **Tester avec Firebase:**
-   - Chaque membre doit ajouter son `google-services.json` dans `app/`
+// Layout: activity_search.xml
+- SearchView avec icône
+- Filtre chips (Tous, Groupes, Utilisateurs)
+- RecyclerView résultats
+```
 
-5. **Commiter et pusher:**
-   ```bash
-   git add .
-   git commit -m "feat: description de la tâche"
-   git push origin feature/nom-du-membre
-   ```
+##### NotificationActivity.kt
+```kotlin
+// Améliorer notifications:
+// 1. Badge sur icône app
+// 2. Pull-to-refresh
+// 3. Swipe to delete
+// 4. Mark all as read
+// 5. Catégories (messages, réunions, système)
 
-6. **Créer une Pull Request** pour merger dans `main`
+// Layout: activity_notifications.xml
+- Toolbar avec "Tout marquer lu"
+- RecyclerView notifications
+- Empty state
+```
+
+##### HomeActivity.kt - Dashboard (9KB)
+```kotlin
+// Améliorer accueil:
+// 1. Widgets rapides (prochaines réunions, messages)
+// 2. Statistiques (groupes, réunions ce mois)
+// 3. Actions rapides
+// 4. Notifications importantes
+
+// Layout: activity_home.xml
+- Header avec avatar + nom
+- Cartes statistiques
+- Liste upcoming meetings
+- Quick actions
+```
+
+##### Navigation - MainActivity.kt
+```kotlin
+// Améliorer navigation:
+// 1. Bottom Navigation Bar
+// 2. Navigation Drawer
+// 3. Animation icônes
+// 4. Badge notifications
+
+// Layout: activity_main.xml
+- FrameLayout pour fragments
+- BottomNavigationView
+```
+
+**Tâches UI:**
+- [ ] Créer design moderne et cohérent
+- [ ] Ajouter animations fluides
+- [ ] Optimiser performance滚动
+- [ ] Gestion erreurs avec retry
+- [ ] États vides élégants
 
 ---
 
-## ⚠️ Points à внимание
+## 📊 Tableau Récapitulatif des Tâches
 
-1. **Fichiers exclus:** `hajar/` et `mariam/` ne sont pas dans le repo GitHub
-2. **Firebase:** Chaque développeur doit avoir son propre `google-services.json`
-3. **Communication:** Utilisez le chat de l'équipe pour coordonner
-4. **Merge conflicts:** Synchronisez régulièrement avec `main`
+### Backend 1 - Chat & Conversations
+
+| Tâche | Fichier | Priorité |
+|-------|---------|----------|
+| Modèle messages | ChatMessage.kt | ⭐ Haute |
+| Envoyer message | ChatActivity.kt | ⭐ Haute |
+| Temps réel messages | ChatActivity.kt | ⭐ Haute |
+| Liste conversations | ChatListActivity.kt | ⭐ Haute |
+| Créer groupe | ChatGroupsAdapter.kt | 🔄 Moyen |
+| Marquer lu | ChatActivity.kt | 🔄 Moyen |
+
+### Backend 2 - Meetings & Calendar
+
+| Tâche | Fichier | Priorité |
+|-------|---------|----------|
+| **JOIN MEETING** | MeetingDetailActivity.kt:23 | 🔴 URGENT |
+| **ADD TO CALENDAR** | MeetingDetailActivity.kt:28 | 🔴 URGENT |
+| Créer réunion | PlanifierMeetingActivity.kt:66 | ⭐ Haute |
+| Charger réunions | CalendarMeetingActivity.kt | ⭐ Haute |
+| Calendrier mensuel | MeetingCalendarActivity.kt | 🔄 Moyen |
+| Détails réunion | MeetingDetailsActivity.kt | 🔄 Moyen |
+
+### Frontend 1 - Auth + Profile + Groups
+
+| Tâche | Fichier | Priorité |
+|-------|---------|----------|
+| Design connexion | LoginActivity.kt | ⭐ Haute |
+| Animation inscription | RegisterActivity.kt | ⭐ Haute |
+| Interface profil | ProfileActivity.kt | ⭐ Haute |
+| Édition profil | EditProfileActivity.kt | 🔄 Moyen |
+| Liste groupes | GroupsActivity.kt | ⭐ Haute |
+| Dialog créer groupe | GroupsActivity.kt | 🔄 Moyen |
+
+### Frontend 2 - Search + Notifications + Home
+
+| Tâche | Fichier | Priorité |
+|-------|---------|----------|
+| Recherche temps réel | SearchActivity.kt | ⭐ Haute |
+| Notifications push | NotificationActivity.kt | ⭐ Haute |
+| Dashboard | HomeActivity.kt | ⭐ Haute |
+| Navigation | MainActivity.kt | 🔄 Moyen |
+| États vides | Tous layouts | 🔄 Moyen |
+
+---
+
+## 🚀 Instructions de Travail
+
+### Pour Backend Developers:
+
+```bash
+# 1. Cloner le repo
+git clone https://github.com/AkeskousKhadija/StudyRoom.git
+
+# 2. Créer branche backend-chat OU backend-meetings
+git checkout -b backend-chat
+
+# 3. Travailler sur les fichiers Firestore
+# 4. Tester avec Firebase local emulator OU cloud
+
+# 5. Commiter
+git add .
+git commit -m "feat(chat): Add Firestore real-time messages"
+git push origin backend-chat
+
+# 6. Créer Pull Request
+```
+
+### Pour Frontend Developers:
+
+```bash
+# 1. Cloner le repo
+git clone https://github.com/AkeskousKhadija/StudyRoom.git
+
+# 2. Créer branche frontend-auth OU frontend-ui
+git checkout -b frontend-auth
+
+# 3. Travailler sur layouts et animations
+# 4. Tester sur émulateur
+
+# 5. Commiter
+git add .
+git commit -m "feat(ui): Improve login screen design"
+git push origin frontend-auth
+
+# 6. Créer Pull Request
+```
+
+---
+
+## ⚠️ Règles Importantes
+
+1. **Pas de code en dur** - Utiliser Firebase pour toutes les données
+2. **Valider entrée** - Vérifier données côté client ET serveur
+3. **Gestion erreurs** - Afficher messages utilisateur clairs
+4. **Synchronisation** - Merger régulièrement avec main
+5. **Code review** - Au moins 1 approval avant merge
+
+---
+
+## 🎯 Objectifs Sprint
+
+### Première semaine:
+- [ ] Backend 1: Chat temps réel fonctionnel
+- [ ] Backend 2: JOIN MEETING + ADD TO CALENDAR
+- [ ] Frontend 1: Design auth + profile
+- [ ] Frontend 2: Dashboard + Navigation
+
+### Deuxième semaine:
+- [ ] Intégration complete
+- [ ] Tests utilisateurs
+- [ ] Corrections bugs
+- [ ] Préparation présentation
